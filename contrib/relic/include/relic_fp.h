@@ -98,6 +98,8 @@ enum {
 	PRIME_383187,
 	/** NIST 384-bit fast reduction polynomial. */
 	NIST_384,
+	/** Curve448 prime. */
+	PRIME_448,
 	/** Curve511187 511-bit prime modulus. */
 	PRIME_511187,
 	/** NIST 521-bit fast reduction polynomial. */
@@ -108,10 +110,14 @@ enum {
 	BN_254,
 	/** 256-bit prime provided in Barreto et al. for BN curves. */
 	BN_256,
+	/** 256-bit prime provided for BN curve standardized in China. */
+	SM9_256,
 	/** 381-bit prime for BLS curve of embedding degree 12 (Zcash). */
 	B12_381,
 	/** 382-bit prime provided by Barreto for BN curve. */
 	BN_382,
+	/** 383-bit prime for GT-strong BLS curve of embedding degree 12. */
+	B12_383,
 	/** 446-bit prime provided by Barreto for BN curve. */
 	BN_446,
 	/** 446-bit prime for BLS curve of embedding degree 12. */
@@ -119,13 +125,13 @@ enum {
 	/** 455-bit prime for BLS curve of embedding degree 12. */
 	B12_455,
 	/** 477-bit prime for BLS curve of embedding degree 24. */
-	B24_477,
+	B24_509,
 	/** 508-bit prime for KSS16 curve. */
 	KSS_508,
 	/** 511-bit prime for Optimal TNFS-secure curve. */
 	OT_511,
 	/** Random 544-bit prime for Cocks-Pinch curve with embedding degree 8. */
-	CP8_544,
+	GMT8_544,
 	/** 569-bit prime for KSS curve with embedding degree 54. */
 	K54_569,
 	/** 575-bit prime for BLS curve with embedding degree 48. */
