@@ -27,15 +27,16 @@ jobs:
             apt_get: gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
             arch_packages: libgmp-dev:arm64 libsodium-dev:arm64
 
-          #- name: i686 Linux
-          #  os: ubuntu-20.04
-          #  host: i686-pc-linux-gnu
-          #  arch: armhf
-          #  apt_get: gcc-multilib g++-multilib
-          #  arch_packages: libgmp-dev:i386 libsodium-dev:i386
-
           - name: x86_64 Linux
             os: ubuntu-20.04
+            host: x86_64-unknown-linux-gnu
+            arch: armhf # dummy arch
+            apt_get: gcc-multilib g++-multilib
+            arch_packages: libgmp-dev libsodium-dev
+            unit_tests: true
+
+          - name: x86_64 Linux [Jammy]
+            os: ubuntu-22.04
             host: x86_64-unknown-linux-gnu
             arch: armhf # dummy arch
             apt_get: gcc-multilib g++-multilib
